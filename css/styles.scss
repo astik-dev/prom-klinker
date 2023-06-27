@@ -458,9 +458,11 @@ $Oswald: 'Oswald', sans-serif;
 	&__continer {
 		margin-top: 19px !important;
 		@include flex(flex, row, 30px, flex-start, center);
+		flex-wrap: wrap;
 	}
 	&__text {
 		width: calc(59% - 30px);
+		min-width: 274px;
 
 		.block-p15 {
 			margin: 40px 0 30px 0;
@@ -502,6 +504,7 @@ $Oswald: 'Oswald', sans-serif;
 	}
 	&__socials {
 		width: 41%;
+		min-width: 222px;
 
 		text-align: center;
 
@@ -547,6 +550,24 @@ $Oswald: 'Oswald', sans-serif;
 			margin: 50px 30px 0 0;
 			width: 90px;
 			height: 90px !important;
+		}
+	}
+}
+
+@media (max-width: 670px) {
+	.get {
+		margin: 60px 0 0 0;
+		padding: 25px 15px;
+
+		&__text,
+		&__socials {
+			width: 100%;
+			min-width: auto;
+		}
+		&__socials {
+			& > img {
+				display: none;
+			}
 		}
 	}
 }
