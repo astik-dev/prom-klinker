@@ -101,6 +101,14 @@ $Oswald: 'Oswald', sans-serif;
 		h2 {
 			font-size: 28px;
 		}
+
+		h3 {
+			font-size: 24px;
+		}
+
+		h4 {
+			font-size: 17px;
+		}
 	}
 }
 
@@ -119,6 +127,12 @@ $Oswald: 'Oswald', sans-serif;
 .txt {
 	font-family: $FiraSans;
 	@include font(15px, 1.6);
+}
+
+@media (max-width: 370px) {
+	.txt {
+		font-size: 14px;
+	}
 }
 
 
@@ -203,7 +217,7 @@ $Oswald: 'Oswald', sans-serif;
 
 .advantages {
 	margin-bottom: 110px;
-	@include grid(grid, repeat(auto-fit, minmax(250px, 1fr)), 40px, stretch, left);
+	@include grid(grid, repeat(auto-fit, minmax(320px, 1fr)), 35px, stretch, left);
 
 	&__item {
 		@include grid(grid, auto 1fr, 20px, start, left);
@@ -228,6 +242,34 @@ $Oswald: 'Oswald', sans-serif;
 
 			p {
 				margin-top: 19px;
+			}
+		}
+	}
+}
+
+@media (max-width: 650px) {
+	.advantages {
+		grid-template-columns: minmax(240px, 1fr);
+	}
+}
+
+@media (max-width: 370px) {
+	.advantages {
+		&__item {
+			gap: 10px;
+			padding: 10px;
+
+			span {
+				width: 28px;
+				padding: 2px 0;
+
+				font-size: 17px;
+			}
+
+			div {
+				p {
+					margin-top: 9px;
+				}
 			}
 		}
 	}

@@ -83,6 +83,12 @@ h1 {
 	.body h2 {
 		font-size: 28px;
 	}
+	.body h3 {
+		font-size: 24px;
+	}
+	.body h4 {
+		font-size: 17px;
+	}
 }
 .line-big {
 	width: 15%;
@@ -97,6 +103,11 @@ h1 {
 	line-height: 1.6;
 }
 
+@media (max-width: 370px) {
+	.txt {
+		font-size: 14px;
+	}
+}
 .block-p15 {
 	padding: 15px;
 	border-radius: 10px;
@@ -174,8 +185,8 @@ h1 {
 	margin-bottom: 110px;
 	display: -ms-grid;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 40px;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 35px;
 	-webkit-box-align: stretch;
 	    -ms-flex-align: stretch;
 	        align-items: stretch;
@@ -214,4 +225,25 @@ h1 {
 }
 .advantages__item div p {
 	margin-top: 19px;
+}
+
+@media (max-width: 650px) {
+	.advantages {
+		-ms-grid-columns: minmax(240px, 1fr);
+		grid-template-columns: minmax(240px, 1fr);
+	}
+}
+@media (max-width: 370px) {
+	.advantages__item {
+		gap: 10px;
+		padding: 10px;
+	}
+	.advantages__item span {
+		width: 28px;
+		padding: 2px 0;
+		font-size: 17px;
+	}
+	.advantages__item div p {
+		margin-top: 9px;
+	}
 }
