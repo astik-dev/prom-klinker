@@ -17,6 +17,22 @@ h1{font-size: inherit;font-weight: 400;}
 
 
 
+// Mixins
+@mixin font ($fs, $lh) {
+	font-size: $fs;
+	line-height: $lh;
+}
+
+@mixin flex ($f, $fd, $g, $ai, $jc) {
+	display: $f;
+	flex-direction: $fd;
+	gap: $g;
+	align-items: $ai;
+	justify-content: $jc;
+}
+
+
+
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
@@ -25,3 +41,104 @@ h1{font-size: inherit;font-weight: 400;}
 $Exo2: 'Exo 2', sans-serif;
 $FiraSans: 'Fira Sans', sans-serif;
 $Oswald: 'Oswald', sans-serif;
+
+
+
+.body {
+	padding: 50px 25px 90px 25px;
+
+	color: rgb(170, 170, 173);
+
+	background: rgb(45, 45, 47);
+
+	h2 {
+		max-width: 672px;
+
+		font-family: $Oswald;
+		@include font(34px, 1.2);
+		font-weight: 500;
+		color: rgb(255, 219, 153);
+
+		span {
+			color: #fff;
+			font-weight: 700;
+		}
+	}
+
+	h4 {
+		font-family: $Exo2;
+		@include font(22px, 1.4);
+		font-weight: 500;
+		color: #fff;
+	}
+}
+
+
+
+.line-big {
+	width: 15%;
+	height: 3px;
+	margin: 30px 0 65px 0;
+
+	background-color: rgb(255, 218, 153);
+}
+
+
+
+.txt {
+	font-family: $FiraSans;
+	@include font(15px, 1.6);
+}
+
+
+
+.block-p15 {
+	padding: 15px;
+
+	border-radius: 10px;
+	background: rgba(86, 86, 90, 0.25);
+}
+
+
+
+.description {
+	@include flex(flex, row, 45px, flex-start, center);
+
+
+	&__text {
+		width: calc(100% - 45px - 280px);
+
+		& > p.txt {
+			margin: 35px 0;
+		}
+
+		& > .block-p15 {
+			p {
+				font-family: $Exo2;
+				@include font(18px, 1.6);
+				color: #fff;
+			}
+		}
+	}
+	&__img {
+		width: 280px;
+
+		&-cont {
+			position: relative;
+			padding-bottom: 115%;
+		}
+		
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			width: 100%;
+			height: 100%;
+
+			border-radius: 10px;
+
+			object-fit: cover;
+		}
+	}
+}
