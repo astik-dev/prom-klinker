@@ -445,3 +445,108 @@ $Oswald: 'Oswald', sans-serif;
 		}
 	}
 }
+
+
+
+.get {
+	margin: 100px 0 0 0;
+	padding: 30px 20px;
+
+	border: 3px double rgb(127, 127, 132);
+	border-radius: 10px;
+
+	&__continer {
+		margin-top: 19px !important;
+		@include flex(flex, row, 30px, flex-start, center);
+	}
+	&__text {
+		width: calc(59% - 30px);
+
+		.block-p15 {
+			margin: 40px 0 30px 0;
+			padding: 20px 15px;
+		}
+
+		ul {
+			list-style: none;
+
+			li + li {
+				margin-top: 12px;
+			}
+
+			li {
+				position: relative;
+
+				padding-left: 32px;
+				
+				font-family: $FiraSans;
+					@include font(15px, 1.6);
+					color: #fff !important;
+				
+				&:before {
+					content: "";
+
+					position: absolute;
+					top: 0;
+					left: 0;
+
+					display: inline-block;
+					width: 24px;
+					height: 24px;
+
+					background: url("https://img2.creatium.app/plp/i.1.creatium.io/cb/f1/85/d0621f75a914ab1ab4ae9fde7053d27367/iconfinder_correct_3855625.png") no-repeat;
+					background-size: 100% 100%;
+				}
+			}
+		}
+	}
+	&__socials {
+		width: 41%;
+
+		text-align: center;
+
+		&-links {
+			@include flex(flex, row, 0, flex-start, space-around);
+
+			a {
+				display: block;
+			    width: 82px;
+			    height: 82px;
+			    animation: radial-pulse-blue 1s infinite;
+			    border-radius: 50%;
+
+			    img {
+			    	width: 100%;
+			    	height: 100% !important;
+			    }
+			}
+
+			a:nth-child(2) {
+				animation: radial-pulse-purple 1s infinite;
+			}
+
+			@keyframes radial-pulse-blue {
+			    0% {
+			    	box-shadow: 0 0 0 0px rgba(77,173,221, 0.5);
+			    }
+			    100% {
+			    	box-shadow: 0 0 0 25px rgba(77,173,221, 0);
+			    }
+			}
+
+			@keyframes radial-pulse-purple {
+			    0% {
+			    	box-shadow: 0 0 0 0px rgba(111,63,170, 0.5);
+			    }
+			    100% {
+			    	box-shadow: 0 0 0 25px rgba(111,63,170, 0);
+			    }
+			}
+		}
+		& > img {
+			margin: 50px 30px 0 0;
+			width: 90px;
+			height: 90px !important;
+		}
+	}
+}

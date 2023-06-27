@@ -407,3 +407,138 @@ h1 {
 		gap: 15px;
 	}
 }
+.get {
+	margin: 100px 0 0 0;
+	padding: 30px 20px;
+	border: 3px double rgb(127, 127, 132);
+	border-radius: 10px;
+}
+.get__continer {
+	margin-top: 19px !important;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	gap: 30px;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.get__text {
+	width: calc(59% - 30px);
+}
+.get__text .block-p15 {
+	margin: 40px 0 30px 0;
+	padding: 20px 15px;
+}
+.get__text ul {
+	list-style: none;
+}
+.get__text ul li + li {
+	margin-top: 12px;
+}
+.get__text ul li {
+	position: relative;
+	padding-left: 32px;
+	font-family: "Fira Sans", sans-serif;
+	font-size: 15px;
+	line-height: 1.6;
+	color: #fff !important;
+}
+.get__text ul li:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background: url("https://img2.creatium.app/plp/i.1.creatium.io/cb/f1/85/d0621f75a914ab1ab4ae9fde7053d27367/iconfinder_correct_3855625.png") no-repeat;
+	background-size: 100% 100%;
+}
+.get__socials {
+	width: 41%;
+	text-align: center;
+}
+.get__socials-links {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	gap: 0;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+}
+.get__socials-links a {
+	display: block;
+	width: 82px;
+	height: 82px;
+	-webkit-animation: radial-pulse-blue 1s infinite;
+	        animation: radial-pulse-blue 1s infinite;
+	border-radius: 50%;
+}
+.get__socials-links a img {
+	width: 100%;
+	height: 100% !important;
+}
+.get__socials-links a:nth-child(2) {
+	-webkit-animation: radial-pulse-purple 1s infinite;
+	        animation: radial-pulse-purple 1s infinite;
+}
+@-webkit-keyframes radial-pulse-blue {
+	0% {
+		-webkit-box-shadow: 0 0 0 0px rgba(77, 173, 221, 0.5);
+		        box-shadow: 0 0 0 0px rgba(77, 173, 221, 0.5);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 25px rgba(77, 173, 221, 0);
+		        box-shadow: 0 0 0 25px rgba(77, 173, 221, 0);
+	}
+}
+@keyframes radial-pulse-blue {
+	0% {
+		-webkit-box-shadow: 0 0 0 0px rgba(77, 173, 221, 0.5);
+		        box-shadow: 0 0 0 0px rgba(77, 173, 221, 0.5);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 25px rgba(77, 173, 221, 0);
+		        box-shadow: 0 0 0 25px rgba(77, 173, 221, 0);
+	}
+}
+@-webkit-keyframes radial-pulse-purple {
+	0% {
+		-webkit-box-shadow: 0 0 0 0px rgba(111, 63, 170, 0.5);
+		        box-shadow: 0 0 0 0px rgba(111, 63, 170, 0.5);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 25px rgba(111, 63, 170, 0);
+		        box-shadow: 0 0 0 25px rgba(111, 63, 170, 0);
+	}
+}
+@keyframes radial-pulse-purple {
+	0% {
+		-webkit-box-shadow: 0 0 0 0px rgba(111, 63, 170, 0.5);
+		        box-shadow: 0 0 0 0px rgba(111, 63, 170, 0.5);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 25px rgba(111, 63, 170, 0);
+		        box-shadow: 0 0 0 25px rgba(111, 63, 170, 0);
+	}
+}
+.get__socials > img {
+	margin: 50px 30px 0 0;
+	width: 90px;
+	height: 90px !important;
+}
