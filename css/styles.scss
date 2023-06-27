@@ -291,6 +291,7 @@ $Oswald: 'Oswald', sans-serif;
 
 
 .reviews {
+	margin-bottom: 90px;
 	@include flex(flex, row, 40px, flex-start, center);
 	flex-wrap: wrap;
 
@@ -395,6 +396,33 @@ $Oswald: 'Oswald', sans-serif;
 
 		&__item:nth-child(1) {
 			margin-bottom: 35px;
+		}
+	}
+}
+
+
+
+.why {
+	margin: 70px 0 0 0;
+	@include grid(grid, repeat(auto-fit, minmax(199px, 1fr)), 55px, stretch, left);
+
+	&__item {
+		display: grid;
+		justify-items: center;
+		gap: 25px;
+		grid-template-rows: auto auto 1fr;
+
+		text-align: center;
+
+		img {
+			width: 76.8px;
+			height: 76.8px;
+		}
+		p {
+			padding: 20px 10px;
+
+			border-radius: 10px;
+			background: rgba(86, 86, 90, 0.25);
 		}
 	}
 }

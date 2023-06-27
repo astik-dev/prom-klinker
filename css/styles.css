@@ -261,6 +261,7 @@ h1 {
 	}
 }
 .reviews {
+	margin-bottom: 90px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -356,4 +357,35 @@ h1 {
 	.reviews__item:nth-child(1) {
 		margin-bottom: 35px;
 	}
+}
+.why {
+	margin: 70px 0 0 0;
+	display: -ms-grid;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(199px, 1fr));
+	gap: 55px;
+	-webkit-box-align: stretch;
+	    -ms-flex-align: stretch;
+	        align-items: stretch;
+	-webkit-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
+}
+.why__item {
+	display: -ms-grid;
+	display: grid;
+	justify-items: center;
+	gap: 25px;
+	-ms-grid-rows: auto 25px auto 25px 1fr;
+	grid-template-rows: auto auto 1fr;
+	text-align: center;
+}
+.why__item img {
+	width: 76.8px;
+	height: 76.8px;
+}
+.why__item p {
+	padding: 20px 10px;
+	border-radius: 10px;
+	background: rgba(86, 86, 90, 0.25);
 }
