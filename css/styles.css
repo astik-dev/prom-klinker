@@ -35,6 +35,10 @@ h1 {
 	font-weight: 400;
 }
 
+body {
+	background: #000;
+}
+
 .html {
 	max-width: 840px;
 	margin: 0 auto;
@@ -559,4 +563,46 @@ h1 {
 	.get__socials > img {
 		display: none;
 	}
+}
+.warranty {
+	margin-top: 90px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	gap: 65px;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.warranty > img {
+	width: 16.875%;
+	min-width: 100px;
+}
+.warranty__text {
+	width: calc(83.125% - 65px);
+}
+.warranty__text p.txt {
+	margin: 35px 0 50px 0;
+}
+.warranty__text p.txt span {
+	color: #fff;
+}
+.warranty__text .block-p15 p {
+	max-width: 410px;
+	margin: 0 auto;
+	font-family: "Exo 2", sans-serif;
+	font-size: 20px;
+	line-height: 1.6;
+	color: #fff !important;
+	text-align: center;
+}
+.warranty__text .block-p15 p span {
+	color: rgb(255, 219, 153);
 }
