@@ -127,6 +127,7 @@ $Oswald: 'Oswald', sans-serif;
 .txt {
 	font-family: $FiraSans;
 	@include font(15px, 1.6);
+	font-weight: 300;
 }
 
 @media (max-width: 370px) {
@@ -272,5 +273,82 @@ $Oswald: 'Oswald', sans-serif;
 				}
 			}
 		}
+	}
+}
+
+
+
+.reviews {
+	@include flex(flex, row, 45px, flex-start, center);
+	flex-wrap: wrap;
+
+	&__h3-img {
+		width: 35%;
+		padding-top: 19px;
+
+		h3 {
+			margin-bottom: 90px !important;
+		}
+	}
+	&__img-cont {
+		position: relative;
+		
+		padding-bottom: 115%;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			width: 100%;
+			height: 100% !important;
+
+			object-fit: cover;
+		}
+	}
+	&__items {
+		width: calc(65% - 45px);
+		min-width: 300px;
+	}
+	&__item {
+		img {
+			width: 84px;
+			height: 21px;
+		}
+		&-text {
+			position: relative;
+
+			padding: 27px 24px;
+			margin: 15px 0 44px 0;
+
+			font-style: italic !important;
+
+			border-radius: 10px;
+			background-color: rgba(86, 86, 90, 0.25);
+		
+			&:before {
+				content: '';
+
+				position: absolute;
+				bottom: -24px;
+				left: 30px;
+			    
+			    display: inline-block;
+			    
+			    border: 12px solid transparent;
+			    border-left: 12px solid rgba(86, 86, 90, 0.25);
+			    border-top: 12px solid rgba(86, 86, 90, 0.25);
+			}
+		}
+		&-name {
+			color: #fff !important;
+			font-weight: 700;
+		}
+		&-date {
+			color: #fff !important;
+		}
+	}
+	&__item:nth-child(1) {
+		margin-bottom: 50px;
 	}
 }
