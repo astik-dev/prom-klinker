@@ -42,8 +42,8 @@ h1 {
 }
 
 .body {
-	padding: 50px 25px 90px 25px;
-	color: rgb(170, 170, 173);
+	padding: 50px 20px 90px 20px;
+	color: rgb(170, 170, 173) !important;
 	background: rgb(45, 45, 47);
 }
 .body h2 {
@@ -52,10 +52,10 @@ h1 {
 	font-size: 34px;
 	line-height: 1.2;
 	font-weight: 500;
-	color: rgb(255, 219, 153);
+	color: rgb(255, 219, 153) !important;
 }
 .body h2 span {
-	color: #fff;
+	color: #fff !important;
 	font-weight: 700;
 }
 .body h4 {
@@ -63,9 +63,14 @@ h1 {
 	font-size: 22px;
 	line-height: 1.4;
 	font-weight: 500;
-	color: #fff;
+	color: #fff !important;
 }
 
+@media (max-width: 370px) {
+	.body h2 {
+		font-size: 28px;
+	}
+}
 .line-big {
 	width: 15%;
 	height: 3px;
@@ -100,9 +105,12 @@ h1 {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 .description__text {
-	width: calc(100% - 45px - 280px);
+	width: calc(65% - 45px);
+	min-width: 272px;
 }
 .description__text > p.txt {
 	margin: 35px 0;
@@ -111,10 +119,11 @@ h1 {
 	font-family: "Exo 2", sans-serif;
 	font-size: 18px;
 	line-height: 1.6;
-	color: #fff;
+	color: #fff !important;
 }
 .description__img {
-	width: 280px;
+	width: 35%;
+	min-width: 170px;
 }
 .description__img-cont {
 	position: relative;
@@ -129,4 +138,15 @@ h1 {
 	border-radius: 10px;
 	-o-object-fit: cover;
 	   object-fit: cover;
+}
+
+@media (max-width: 650px) {
+	.description__text {
+		width: 100%;
+		min-width: auto;
+	}
+	.description__img {
+		width: 100%;
+		max-width: 280px;
+	}
 }

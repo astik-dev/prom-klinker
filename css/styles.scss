@@ -45,9 +45,9 @@ $Oswald: 'Oswald', sans-serif;
 
 
 .body {
-	padding: 50px 25px 90px 25px;
+	padding: 50px 20px 90px 20px;
 
-	color: rgb(170, 170, 173);
+	color: rgb(170, 170, 173) !important;
 
 	background: rgb(45, 45, 47);
 
@@ -57,10 +57,10 @@ $Oswald: 'Oswald', sans-serif;
 		font-family: $Oswald;
 		@include font(34px, 1.2);
 		font-weight: 500;
-		color: rgb(255, 219, 153);
+		color: rgb(255, 219, 153) !important;
 
 		span {
-			color: #fff;
+			color: #fff !important;
 			font-weight: 700;
 		}
 	}
@@ -69,7 +69,15 @@ $Oswald: 'Oswald', sans-serif;
 		font-family: $Exo2;
 		@include font(22px, 1.4);
 		font-weight: 500;
-		color: #fff;
+		color: #fff !important;
+	}
+}
+
+@media (max-width: 370px) {
+	.body {
+		h2 {
+			font-size: 28px;
+		}
 	}
 }
 
@@ -103,10 +111,11 @@ $Oswald: 'Oswald', sans-serif;
 
 .description {
 	@include flex(flex, row, 45px, flex-start, center);
-
+	flex-wrap: wrap;
 
 	&__text {
-		width: calc(100% - 45px - 280px);
+		width: calc(65% - 45px);
+		min-width: 272px;
 
 		& > p.txt {
 			margin: 35px 0;
@@ -116,18 +125,19 @@ $Oswald: 'Oswald', sans-serif;
 			p {
 				font-family: $Exo2;
 				@include font(18px, 1.6);
-				color: #fff;
+				color: #fff !important;
 			}
 		}
 	}
 	&__img {
-		width: 280px;
-
+		width: 35%;
+		min-width: 170px;
+		
 		&-cont {
 			position: relative;
 			padding-bottom: 115%;
 		}
-		
+
 		img {
 			position: absolute;
 			top: 0;
@@ -139,6 +149,19 @@ $Oswald: 'Oswald', sans-serif;
 			border-radius: 10px;
 
 			object-fit: cover;
+		}
+	}
+}
+
+@media (max-width: 650px) {
+	.description {
+		&__text {
+			width: 100%;
+			min-width: auto;
+		}
+		&__img {
+			width: 100%;
+			max-width: 280px;
 		}
 	}
 }
