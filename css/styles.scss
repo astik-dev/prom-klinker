@@ -369,6 +369,8 @@ $Oswald: 'Oswald', sans-serif;
 
 @media (max-width: 570px) {
 	.reviews {
+		margin-bottom: 60px;
+
 		&__h3-img,
 		&__items {
 			width: 100%;
@@ -423,6 +425,23 @@ $Oswald: 'Oswald', sans-serif;
 
 			border-radius: 10px;
 			background: rgba(86, 86, 90, 0.25);
+		}
+	}
+}
+
+@media (max-width: 570px) {
+	.why {
+		margin: 50px 0 0 0;
+	}
+}
+
+@media (max-width: 516px) {
+	.why {
+		margin: 40px 0 0 0;
+		gap: 40px;
+
+		&__item {
+			gap: 15px;
 		}
 	}
 }

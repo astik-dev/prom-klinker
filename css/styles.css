@@ -338,6 +338,9 @@ h1 {
 }
 
 @media (max-width: 570px) {
+	.reviews {
+		margin-bottom: 60px;
+	}
 	.reviews__h3-img, .reviews__items {
 		width: 100%;
 		min-width: auto;
@@ -388,4 +391,19 @@ h1 {
 	padding: 20px 10px;
 	border-radius: 10px;
 	background: rgba(86, 86, 90, 0.25);
+}
+
+@media (max-width: 570px) {
+	.why {
+		margin: 50px 0 0 0;
+	}
+}
+@media (max-width: 516px) {
+	.why {
+		margin: 40px 0 0 0;
+		gap: 40px;
+	}
+	.why__item {
+		gap: 15px;
+	}
 }
