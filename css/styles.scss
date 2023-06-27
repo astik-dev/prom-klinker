@@ -31,6 +31,14 @@ h1{font-size: inherit;font-weight: 400;}
 	justify-content: $jc;
 }
 
+@mixin grid ($g, $gtc, $gap, $ai, $jc) {
+	display: $g;
+	grid-template-columns: $gtc;
+	gap: $gap;
+	align-items: $ai;
+	justify-content: $jc;
+}
+
 
 
 @charset "UTF-8";
@@ -51,12 +59,18 @@ $Oswald: 'Oswald', sans-serif;
 
 	background: rgb(45, 45, 47);
 
+	h2,
+	h3,
+	h4 {
+		margin: 0 !important;
+		font-weight: 500;
+	}
+
 	h2 {
 		max-width: 672px;
 
 		font-family: $Oswald;
 		@include font(34px, 1.2);
-		font-weight: 500;
 		color: rgb(255, 219, 153) !important;
 
 		span {
@@ -65,10 +79,19 @@ $Oswald: 'Oswald', sans-serif;
 		}
 	}
 
+	h3 {
+		font-family: $Oswald;
+		@include font(30px, 1.1);
+		color: rgb(255, 219, 153) !important;
+
+		span {
+			color: #fff !important;
+		}
+	}
+
 	h4 {
 		font-family: $Exo2;
 		@include font(22px, 1.4);
-		font-weight: 500;
 		color: #fff !important;
 	}
 }
@@ -110,6 +133,7 @@ $Oswald: 'Oswald', sans-serif;
 
 
 .description {
+	margin-bottom: 90px;
 	@include flex(flex, row, 45px, flex-start, center);
 	flex-wrap: wrap;
 
@@ -144,7 +168,7 @@ $Oswald: 'Oswald', sans-serif;
 			left: 0;
 
 			width: 100%;
-			height: 100%;
+			height: 100% !important;
 
 			border-radius: 10px;
 
@@ -162,6 +186,49 @@ $Oswald: 'Oswald', sans-serif;
 		&__img {
 			width: 100%;
 			max-width: 280px;
+		}
+	}
+}
+
+
+
+.line-min {
+	width: 5%;
+	height: 3px;
+
+	background-color: rgb(255, 218, 153);
+}
+
+
+
+.advantages {
+	margin-bottom: 110px;
+	@include grid(grid, repeat(auto-fit, minmax(250px, 1fr)), 40px, stretch, left);
+
+	&__item {
+		@include grid(grid, auto 1fr, 20px, start, left);
+
+		span {
+			display: inline-block;
+			width: 40px;
+			padding: 5px 0;
+
+			font-family: $Oswald;
+			@include font(22px, 1.6);
+			color: rgb(255, 219, 153) !important;
+			font-weight: 700;
+			text-align: center;
+
+			background-color: rgb(45, 45, 47);
+    		border-radius: 10px;
+		}
+
+		div {
+			padding: 5px 0 10px 0;
+
+			p {
+				margin-top: 19px;
+			}
 		}
 	}
 }

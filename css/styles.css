@@ -46,23 +46,36 @@ h1 {
 	color: rgb(170, 170, 173) !important;
 	background: rgb(45, 45, 47);
 }
+.body h2,
+.body h3,
+.body h4 {
+	margin: 0 !important;
+	font-weight: 500;
+}
 .body h2 {
 	max-width: 672px;
 	font-family: "Oswald", sans-serif;
 	font-size: 34px;
 	line-height: 1.2;
-	font-weight: 500;
 	color: rgb(255, 219, 153) !important;
 }
 .body h2 span {
 	color: #fff !important;
 	font-weight: 700;
 }
+.body h3 {
+	font-family: "Oswald", sans-serif;
+	font-size: 30px;
+	line-height: 1.1;
+	color: rgb(255, 219, 153) !important;
+}
+.body h3 span {
+	color: #fff !important;
+}
 .body h4 {
 	font-family: "Exo 2", sans-serif;
 	font-size: 22px;
 	line-height: 1.4;
-	font-weight: 500;
 	color: #fff !important;
 }
 
@@ -91,6 +104,7 @@ h1 {
 }
 
 .description {
+	margin-bottom: 90px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -134,7 +148,7 @@ h1 {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 100% !important;
 	border-radius: 10px;
 	-o-object-fit: cover;
 	   object-fit: cover;
@@ -149,4 +163,55 @@ h1 {
 		width: 100%;
 		max-width: 280px;
 	}
+}
+.line-min {
+	width: 5%;
+	height: 3px;
+	background-color: rgb(255, 218, 153);
+}
+
+.advantages {
+	margin-bottom: 110px;
+	display: -ms-grid;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 40px;
+	-webkit-box-align: stretch;
+	    -ms-flex-align: stretch;
+	        align-items: stretch;
+	-webkit-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
+}
+.advantages__item {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: auto 20px 1fr;
+	grid-template-columns: auto 1fr;
+	gap: 20px;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: start;
+	-webkit-box-pack: left;
+	    -ms-flex-pack: left;
+	        justify-content: left;
+}
+.advantages__item span {
+	display: inline-block;
+	width: 40px;
+	padding: 5px 0;
+	font-family: "Oswald", sans-serif;
+	font-size: 22px;
+	line-height: 1.6;
+	color: rgb(255, 219, 153) !important;
+	font-weight: 700;
+	text-align: center;
+	background-color: rgb(45, 45, 47);
+	border-radius: 10px;
+}
+.advantages__item div {
+	padding: 5px 0 10px 0;
+}
+.advantages__item div p {
+	margin-top: 19px;
 }
