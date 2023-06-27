@@ -102,6 +102,12 @@ $Oswald: 'Oswald', sans-serif;
 	}
 }
 
+@media (max-width: 570px) {
+	.body {
+		padding: 30px 20px 40px 20px;
+	}
+}
+
 @media (max-width: 370px) {
 	.body {
 		h2 {
@@ -472,6 +478,8 @@ $Oswald: 'Oswald', sans-serif;
 		}
 
 		ul {
+			margin: 0 !important;
+			padding: 0 !important;
 			list-style: none;
 
 			li + li {
@@ -578,7 +586,8 @@ $Oswald: 'Oswald', sans-serif;
 
 .warranty {
 	margin-top: 90px;
-	@include flex(flex, row, 65px, flex-start, center);
+	@include flex(flex, row, 25px 65px, flex-start, center);
+	flex-wrap: wrap;
 
 	& > img {
 		width: 16.875%;
@@ -587,6 +596,7 @@ $Oswald: 'Oswald', sans-serif;
 
 	&__text {
 		width: calc(83.125% - 65px);
+		min-width: 320px;
 
 		p.txt {
 			margin: 35px 0 50px 0;
@@ -614,5 +624,34 @@ $Oswald: 'Oswald', sans-serif;
 	}
 }
 
-.txt {}
-.block-p15 {}
+@media (max-width: 675px) {
+	.warranty {
+		margin-top: 60px;
+
+		& > img {
+			width: 135px;
+		}
+		&__text {
+			width: 100%; 
+			min-width: auto;
+
+			p.txt {
+				margin: 25px 0 35px 0;
+			}
+
+			.block-p15 {
+				p {
+					font-size: 17px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 370px) {
+	.warranty {
+		& > img {
+			width: 110px;
+		}
+	}
+}
